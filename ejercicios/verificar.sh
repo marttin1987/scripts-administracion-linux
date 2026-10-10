@@ -1,6 +1,6 @@
 #!/bin/bash
 
-CANTIDAD=$(find ~/proyecto_atlas -type f | grep "\.log$" | wc -l)
+CANTIDAD=$(find "$HOME/proyecto_atlas" -type f | grep -c "\.log$" || true)
 
 echo "Evaluaundo la carpeta ~/proyecto_atlas..."
 
