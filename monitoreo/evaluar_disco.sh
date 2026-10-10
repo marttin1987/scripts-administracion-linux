@@ -13,5 +13,5 @@ elif [ "$PORCENTAJE" -gt 70 ]; then
 	echo "PRECAUCION: Uso de disco al ${PORCENTAJE}%. Monitorear uso."
 	exit 1
 else
-	echo "OK: Uso de disco en nivel normal (${PORCENTAJE}%."
+	echo "OK: Uso de disco en nivel normal (${PORCENTAJE}%)."
 fi

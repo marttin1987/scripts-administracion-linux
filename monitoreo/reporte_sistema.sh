@@ -13,7 +13,7 @@ echo ""
 echo "[1] Estado de la conexion a red e Internet:"
 if ping -c 2 -W 2 1.1.1.1 > /dev/null 2>&1; then
 	echo "Conexion IP (1.1.1.1): OK"
-	if ping -c 2 .W 2 google.com > /dev/null 2>&1; then
+	if ping -c 2 -W 2 google.com > /dev/null 2>&1; then
 		echo "Resolucion DNS (google.com): OK"
 	else
 		echo "ALERTA: Conexion IP OK, pero fallo la resolucion DNS."
@@ -32,7 +32,7 @@ if [ "$PORCENTAJE" -gt 85 ]; then
 	echo " CRITICO: Espacio consumido al ${PORCENTAJE}%."
 	[ "$ESTADO_FINAL" -lt 2 ] && ESTADO_FINAL=2
 elif  [ "$PORCENTAJE" -gt 70 ]; then
-	echo " PRECAUCION: Espacio consumido al %{PORCENTAJE}%."
+	echo " PRECAUCION: Espacio consumido al ${PORCENTAJE}%."
 	[ "$ESTADO_FINAL" -eq 0 ] && ESTADO_FINAL=1
 else
 	echo "Disco saludable al ${PORCENTAJE}% de uso."
@@ -50,7 +50,7 @@ fi
 echo ""
 
 echo "================================="
-echo "Reporte Finalizado (Codigo de salida: $ESTADO_FINAL."
+echo "Reporte Finalizado (Codigo de salida: $ESTADO_FINAL)."
 echo "================================="
 
 exit "$ESTADO_FINAL"
