@@ -1,4 +1,9 @@
 #!/bin/bash
+# ==============================================================================
+# Propósito: Reporte general de infraestructura (Conectividad IP/DNS, Disco, Grupos).
+# Uso: ./monitoreo/reporte_sistema.sh
+# Códigos de Salida: 0 (OK), 1 (PRECAUCIÓN), 2 (CRÍTICO)
+# ==============================================================================
 set -euo pipefail
 
 FECHA=$(date "+%Y-%m-%d %H:%M:%S")

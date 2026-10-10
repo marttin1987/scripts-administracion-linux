@@ -1,4 +1,9 @@
 #!/bin/bash
+# ==============================================================================
+# Propósito: Auditar dispositivos activos en la red local mediante arp-scan.
+# Uso: sudo ./red/escanear_red.sh [interfaz]
+# Codigos de Salida: 0 (OK), 2 (ERROR / Requiere root)
+# ==============================================================================
 set -euo pipefail
 
 # Validar permisos de root antes de continuar

@@ -1,4 +1,9 @@
 #!/bin/bash
+# ==============================================================================
+# Propósito: Evaluar el porcentaje de uso de la partición raíz (/)...
+# Uso: ./monitoreo/evaluar_disco.sh
+# Codigos de Salida: 0 (OK), 1 (PRECAUCIÓN), 2 (CRÍTICO)
+# ==============================================================================
 set -euo pipefail
 
 # Extraer el porcentaje de uso de la raiz de forma robusta
