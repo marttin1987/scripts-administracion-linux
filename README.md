@@ -1,17 +1,34 @@
 # Scripts de Administracion de sistemas Linux
 
-Este repositorio contiene scripts de automatizacion en Bash para la auditoria, monitoreo y gestion de servidores Linux (Ubuntu/Debian).
+Repositorio de scripts en Bash para auditoria, monitoreo de insfraestructura y diagnostico de red en sistemas Debian/Ubuntu
 
-## Script: `reporte_sistema.sh`
-Script de diagnostico inicial del sistema que realiza las siguientes validaciones:
-- Muestra timestamp dianmico de ejecucion.
-- Audita el espacio libre en disco en las particiones `/home`y `/`
-- Verifica los miembros del grupo de trabajo `desarrollo`.
-- Prueba y reporta el estado de la conectividad a red/Internet.
+## Estructura del repositorio
 
-## requisitos e Instalacion
-Dar permisos de ejecucion antes de usar:
+- `monitoreo/`: Scripts de diagnostico de estado del sistema e infraestructura.
+- `red/`: Herramientas de auditoria de red local y conectividad.
+- `ejercicios/`: Practicas de sintaxis en Bash (bucles, parametros, inspeccion).
+
+## Scripts Principales
+
+### 1. `monitoreo/reporte_sistema.sh`
+Audita en tiempo real los recursos criticos del sistema: 
+- **Conectividad:** Verifica resolucion DNS y conectividad IP (1.1.1.1 / google.com).
+- **Almacenamiento:** Mide el uso de la particion raiz `/`de forma robusta.
+- **Seguridad y Usuarios:** Lista los miembros activos del grupo `desarrollo`.
+- **Codigos de Salida:** `0`(OK), `1`(PRECAUCION / Advertencia), `2`(CRITICO).
+
+### 2. `red/escanear_red.sh`
+Herramienta de auditoria de red local con `arp-scan`:
+- Deteccion automatica de la interfaz con ruta por defecto o mediante argumento `$1`.
+- Validacion previa de dependencias (`arp-scan`) y privilegios `root`.
+
+## Requisitos e Instalacion
+
 ```bash
-chmod +x reporte_sistema.sh
-./reporte_sistema.sh
+# Otorgar permisos de ejecucion
+chmod +x monitoreo/reporte_sistema.sh red/escanear_red.sh
+
+# Ejecucion
+./monitoreo/reporte_sistema.sh
+
 
