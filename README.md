@@ -1,6 +1,7 @@
+cat << 'EOF' > $/scripts/README.md
 # Scripts de Administracion de sistemas Linux
 
-Repositorio de scripts en Bash para auditoria, monitoreo de insfraestructura y diagnostico de red en sistemas Debian/Ubuntu
+Repositorio de scripts en Bash para auditoria, monitoreo de infraestructura y diagnostico de red en sistemas Debian/Ubuntu
 
 ## Estructura del repositorio
 
