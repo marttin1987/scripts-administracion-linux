@@ -20,7 +20,7 @@ find  "$DIRECTORIO" -maxdepth 1 -type f | while read -r ARCHIVO; do
 done
 
 exit 0
-EOF
+
 
 
 

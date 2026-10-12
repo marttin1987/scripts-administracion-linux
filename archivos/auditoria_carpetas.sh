@@ -26,6 +26,6 @@ echo " Peso total ocupado: $TAMANO_TOTAL"
 echo ""
 echo "=============================================="
 exit 0
-EOF
+
 
 
